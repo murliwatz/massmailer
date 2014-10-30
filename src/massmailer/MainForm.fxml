@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="massmailer.MainController">
+   <children>
+      <Button layoutX="446.0" layoutY="14.0" mnemonicParsing="false" onAction="#SMTP_Click" prefHeight="25.0" prefWidth="127.0" text="SMTP-Einstellungen" />
+      <Button layoutX="463.0" layoutY="76.0" mnemonicParsing="false" onAction="#VCF_Click" text="Von VCF-Datei" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#EML_Click" text="EML-Datei auswählen" />
+      <Label fx:id="lblEML" layoutX="150.0" layoutY="18.0" text="keine Datei ausgewählt" />
+      <TableView fx:id="tvMails" layoutX="14.0" layoutY="47.0" prefHeight="293.0" prefWidth="408.0">
+        <columns>
+            <TableColumn fx:id="tcMail" prefWidth="314.0" text="E-Mail" />
+            <TableColumn fx:id="tcStatus" prefWidth="88.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="446.0" layoutY="319.0" text="Delay (in secs):" />
+      <TextField fx:id="txtDelay" layoutX="529.0" layoutY="315.0" prefHeight="25.0" prefWidth="47.0" text="300" />
+      <Label layoutX="449.0" layoutY="288.0" text="Sende-Anzahl:" />
+      <TextField fx:id="txtCount" layoutX="529.0" layoutY="284.0" prefHeight="25.0" prefWidth="47.0" text="1" />
+      <Label layoutX="437.0" layoutY="53.0" text="eMail-Adressen importieren" />
+      <Button layoutX="445.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnClipboard_Click" prefHeight="25.0" prefWidth="129.0" text="Aus Zwischenablage" />
+      <Label layoutX="467.0" layoutY="259.0" text="Sende-Optionen" />
+   </children>
+</AnchorPane>
